@@ -1,0 +1,181 @@
+/* Paleta y tipografía */
+:root{
+  --bg: #0f1217;
+  --surface: #161a22;
+  --muted: #8a93a3;
+  --text: #e8ecf3;
+  --primary: #61dafb;
+  --accent: #8ef19c;
+  --danger: #ff7b7b;
+
+  --cat-numeros: #ffd166;
+  --cat-combinatoria: #a78bfa;
+  --cat-recursion: #64d2ff;
+  --cat-modular: #8ef19c;
+
+  --radius: 12px;
+  --shadow: 0 6px 20px rgba(0,0,0,0.25);
+}
+
+*{ box-sizing: border-box; }
+html, body{ height: 100%; }
+body{
+  margin: 0;
+  font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+  color: var(--text);
+  background: linear-gradient(180deg, #0b0e13, var(--bg));
+}
+
+/* Contenedores */
+.container{
+  width: min(1100px, 92vw);
+  margin: 0 auto;
+}
+
+.site-header{
+  position: sticky;
+  top: 0; z-index: 10;
+  background: rgba(15,18,23,0.85);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid #232836;
+}
+.header-inner{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 0;
+}
+.brand{
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+.nav{ display: flex; gap: 14px; }
+.nav-link{
+  color: var(--muted);
+  text-decoration: none;
+  padding: 8px 10px;
+  border-radius: 8px;
+}
+.nav-link:hover{ color: var(--text); background: #1c2230; }
+
+.site-footer{
+  margin-top: 40px;
+  border-top: 1px solid #232836;
+  background: var(--surface);
+}
+.footer-inner{ padding: 20px 0; color: var(--muted); }
+.footer-inner a{ color: var(--primary); }
+
+/* Layout principal */
+.layout{
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 24px;
+  padding: 26px 0 40px;
+}
+@media (max-width: 900px){
+  .layout{ grid-template-columns: 1fr; }
+}
+
+.content h1{
+  font-size: 1.8rem;
+  margin: 6px 0 12px;
+}
+.intro{
+  color: var(--muted);
+  margin-bottom: 20px;
+}
+
+/* Tarjetas de posts */
+.post-card{
+  background: var(--surface);
+  border: 1px solid #232836;
+  border-radius: var(--radius);
+  padding: 18px;
+  box-shadow: var(--shadow);
+  margin-bottom: 16px;
+}
+.post-title{
+  display: inline-block;
+  font-weight: 700;
+  color: var(--text);
+  text-decoration: none;
+  margin-bottom: 6px;
+}
+.post-title:hover{ color: var(--primary); }
+.post-meta{
+  margin: 4px 0 10px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+.post-excerpt{ margin: 0 0 12px; color: #cfd6e6; }
+.read-more{
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;
+}
+.read-more:hover{ text-decoration: underline; }
+
+/* Sidebar */
+.sidebar .widget{
+  background: var(--surface);
+  border: 1px solid #232836;
+  border-radius: var(--radius);
+  padding: 16px;
+  margin-bottom: 16px;
+  box-shadow: var(--shadow);
+}
+.widget h2{
+  margin: 0 0 10px;
+  font-size: 1.1rem;
+}
+.list{
+  list-style: none;
+  padding: 0; margin: 0;
+}
+.list li{ margin: 6px 0; }
+.list a{ color: #cfd6e6; text-decoration: none; }
+.list a:hover{ color: var(--primary); }
+
+/* Etiquetas y badges */
+.badge{
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-weight: 600;
+  color: #0b0e13;
+  background: #cfd6e6;
+}
+.badge.cat-numeros{ background: var(--cat-numeros); }
+.badge.cat-combinatoria{ background: var(--cat-combinatoria); color: #0b0e13; }
+.badge.cat-recursion{ background: var(--cat-recursion); color: #0b0e13; }
+.badge.cat-modular{ background: var(--cat-modular); color: #0b0e13; }
+
+.tags{ display: flex; flex-wrap: wrap; gap: 8px; }
+.tag{
+  display: inline-block;
+  font-size: 0.9rem;
+  color: var(--primary);
+  background: #1c2230;
+  border: 1px solid #273045;
+  padding: 4px 8px;
+  border-radius: 10px;
+  text-decoration: none;
+}
+.tag:hover{ border-color: var(--primary); color: #9be7ff; }
+
+/* Accesibilidad y detalles */
+a:focus, button:focus{ outline: 2px solid var(--primary); outline-offset: 2px; }
+img{ max-width: 100%; border-radius: 10px; }
+code, pre{
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  background: #10141b;
+  color: #bfe7ff;
+  border: 1px solid #273045;
+  border-radius: 8px;
+}
+pre{ padding: 12px; overflow: auto; }
