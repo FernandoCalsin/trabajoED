@@ -180,4 +180,171 @@ code, pre{
 }
 pre{ padding: 12px; overflow: auto; }
 
+/*comentarios------------------------------------------------------------------------------------------------------------------------*/
+.comments {
+  background: var(--surface);
+  padding: 30px;
+  border-radius: 16px;
+  margin-top: 40px;
+  box-shadow: var(--shadow);
+}
+
+.comments h2 {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+  color: var(--text);
+  border-bottom: 1px solid #273045;
+  padding-bottom: 6px;
+}
+
+#form-comentario {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+#form-comentario input,
+#form-comentario textarea {
+  background: var(--bg);
+  border: 1px solid #273045;
+  border-radius: 10px;
+  padding: 12px;
+  color: var(--text);
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+#form-comentario input:focus,
+#form-comentario textarea:focus {
+  border-color: var(--primary);
+  outline: none;
+}
+
+#form-comentario textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+#form-comentario button {
+  align-self: flex-start;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: #0f1217;
+  font-weight: bold;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+#form-comentario button:hover {
+  transform: scale(1.05);
+}
+
+#lista-comentarios .comentario {
+  background: #1c2230;
+  border: 1px solid #273045;
+  padding: 14px;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  animation: fadeIn 0.4s ease;
+}
+
+#lista-comentarios .comentario strong {
+  color: var(--accent);
+  font-size: 1.1rem;
+}
+
+#lista-comentarios .comentario p {
+  margin: 6px 0 0;
+  color: #cfd6e6;
+}
+
+/* Animación suave al agregar comentario */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/*boton modo oscuro claro----------------------------------------------------------------------------------*/
+.theme-btn {
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid #273045;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  line-height: 40px; /* centra el ícono verticalmente */
+  text-align: center; /* centra el ícono horizontalmente */
+  transition: background 0.3s ease, transform 0.2s ease, color 0.3s ease, border-color 0.3s ease;
+  box-shadow: var(--shadow);
+  margin-left: 10px; /* separa del nav */
+}
+
+.theme-btn:hover {
+  background: var(--primary);
+  color: #0f1217;
+  transform: scale(1.08);
+  border-color: var(--primary);
+}
+
+/* Posicionamiento en el header */
+.header-inner {
+  gap: 10px;
+}
+.nav {
+  align-items: center;
+}
+
+/* En móviles, mantenlo cómodo */
+@media (max-width: 600px) {
+  .theme-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 1.1rem;
+    line-height: 36px;
+  }
+}
+
+/* Tema claro (aplicado cuando body.light está activo) */
+body.light {
+  --bg: #f2f4f8;
+  --surface: #ffffff;
+  --muted: #555;
+  --text: #1c1c1c;
+  --primary: #0077ff;
+  --accent: #00c853;
+  --danger: #d32f2f;
+
+  --shadow: 0 4px 12px rgba(0,0,0,0.1);
+  --radius: 10px;
+
+  background: linear-gradient(180deg, #eaf0f6, var(--bg));
+}
+
+/* Ajustes visuales para elementos en modo claro */
+body.light .post-card,
+body.light .sidebar .widget,
+body.light .comments,
+body.light .theme-btn {
+  border-color: #e5e7eb;
+}
+
+body.light #lista-comentarios .comentario {
+  background: #f7fafc;
+  border-color: #e5e7eb;
+}
+
+body.light .tag {
+  background: #f4f6fb;
+  border-color: #d9dee8;
+  color: #0056cc;
+}
+body.light .tag:hover {
+  border-color: var(--primary);
+  color: #0042a3;
+}
 

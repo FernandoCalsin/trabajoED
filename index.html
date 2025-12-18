@@ -17,6 +17,7 @@
         <a href="#etiquetas" class="nav-link">Etiquetas</a>
         <a href="#sobre" class="nav-link">Sobre mí</a>
       </nav>
+      <button id="toggle-theme" class="theme-btn">🌙</button>
     </div>
   </header>
 
@@ -108,9 +109,14 @@
       </aside>
     </section>
     <section id="comentarios" class="comments">
-        <h2>Comentarios</h2>
-        <div id="disqus_thread"></div>
-    </section>
+      <h2>Comentarios</h2>
+      <form id="form-comentario">
+        <input type="text" id="nombre" placeholder="Tu nombre" required />
+        <textarea id="mensaje" placeholder="Escribe tu comentario..." required></textarea>
+        <button type="submit">Publicar</button>
+      </form>
+      <div id="lista-comentarios"></div>
+      </section>
   </main>
 
   <footer class="site-footer">
