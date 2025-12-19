@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aritmetica Modular</title>
+    <link rel="stylesheet" href="../styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="/">Matemáticas discretas</a>
+    </div>
+  </header>
+    <main class="container">
+        <section id="inicio" class="layout">
+            <div class="content">
+                <h1>Publicación 4: Aritmética Modular</h1>
+                    <p class="intro">
+                       La aritmética modular es una rama de las matemáticas que estudia los números a partir del residuo que resulta 
+                       al dividir un número entre otro. Se utiliza cuando los valores “vuelven a empezar” después de alcanzar un cierto límite, 
+                       como ocurre en los relojes, los calendarios o los sistemas digitales. 
+                    </p>
+                    <p class="intro">Se expresa mediante la congruencia:</p>
+                    <p class="intro">
+                        \[
+                        a \equiv b \pmod{n}
+                        \]
+                    </p>
+                    <p class="intro">
+                        Esto significa que los números \(a\) y \(b\) tienen el mismo residuo al dividirse
+                        entre \(n\).
+                    </p>
+                <!-- Congruencia Modular -->
+                <article class="post-card">
+                    <h1>Congruencia Modular</h1>
+                    <p class="post-excerpt">
+                       Dos números son congruentes módulo n si su diferencia es divisible entre n.
+                        En otras palabras, pertenecen a la misma clase de residuos.
+                    </p>
+                    <p>
+                        \[
+                        a \equiv b \pmod{n} \iff n \mid (a - b)
+                        \]
+                    </p>
+                </article>
+                <!-- Suma Modular-->
+                <article class="post-card">
+                    <h1>Suma Modular</h1>
+                    <p class="post-excerpt">
+                        En la suma modular, el residuo de la suma depende únicamente de los residuos de los números que se están sumando.
+                    </p>
+                    <p>
+                        \[
+                        (a + b) \bmod n = ((a \bmod n) + (b \bmod n)) \bmod n
+                        \]
+                    </p>
+                </article>
+                <!--Resta Modular-->
+                <article class="post-card">
+                    <h1>Resta Modular</h1>
+                    <p class="post-excerpt">
+                       La resta modular funciona de manera similar a la suma,
+                        manteniendo siempre el resultado dentro del conjunto de residuos posibles.
+                    </p>
+                    <p>
+                        \[
+                        (a - b) \bmod n = ((a \bmod n) - (b \bmod n)) \bmod n
+                        \]
+                    </p>
+                </article>
+               <!--Multiplicación Modular--> 
+                <article class="post-card">
+                    <h1>Multiplicación Modular</h1>
+                    <p class="post-excerpt">
+                        En la multiplicación modular, se multiplican los residuos y luego se toma nuevamente el módulo.
+                    </p>
+                    <p>
+                        \[
+                        (a \cdot b) \bmod n = ((a \bmod n) \cdot (b \bmod n)) \bmod n
+                        \]
+                    </p>
+                </article>
+                <!-- Aplicaciones -->
+                <article class="post-card">
+                    <h1>Aplicaciones</h1>
+                    <ul>
+                        <li>Criptografía: base de sistemas de cifrado y firmas digitales.</li>
+                        <li>Relojes digitales: controlan ciclos repetitivos.</li>
+                        <li>Sistemas de seguridad informática: protege contraseñas y comunicaciones.</li>
+                        <li>Informática: se usa en funciones hash y control de errores.</li>
+                    </ul>
+                </article>
+            </div>
+
+            <aside class="sidebar">
+                <h2>Ejemplos</h2>
+                <section class="widget">
+                    <img src="../imagenes/aritmetica1.jpeg" alt="ProblemaCombinación">
+                </section>
+                <section class="widget">
+                    <img src="../imagenes/aritmetica2.jpeg" alt="ProblemaPermutacion">
+                </section>
+                <section class="widget">
+                    <img src="../imagenes/aritmetica3.jpeg" alt="ProblemaPermutacion">
+                </section>
+                <section class="widget">
+                    <img src="../imagenes/aritmetica4.jpeg" alt="ProblemaPermutacion">
+                </section>
+            </aside>
+        </section> 
+    </main>
+</body>
+</html>

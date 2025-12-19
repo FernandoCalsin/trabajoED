@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relaciones entre conjuntos</title>
+    <link rel="stylesheet" href="../styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="/">Matemáticas discretas</a>
+    </div>
+  </header>
+    <main class="container">
+        <section id="inicio" class="layout">
+            <div class="content">
+                <h1>Publicación 3: Relaciones</h1>
+                    <p class="intro">
+                        Una relación es una asociación entre elementos de uno o más conjuntos.
+                         Formalmente, una relación entre los conjuntos A y B es un subconjunto del producto cartesiano
+                    </p>
+                    <p>
+                        \[
+                        R \subseteq A \times B
+                        \]
+                    </p>
+                    <p class="intro">
+                        Esto significa que una relación está formada por pares ordenados \((a, b)\),
+                        donde \(a \in A\) y \(b \in B\).
+                    </p>
+                <h1>Tipos de Relaciones</h1>
+                <!-- Relación Reflexiva -->
+                <article class="post-card">
+                    <h1>Relación Reflexiva</h1>
+                    <p class="post-excerpt">
+                        Una relación es <strong>reflexiva</strong> si cada elemento del conjunto está relacionado consigo mismo.
+                    </p>
+                    <p>
+                        \[
+                        (a, a) \in R \quad \text{para todo } a \in A
+                        \]
+                    </p>
+                </article>
+                <!-- Relación simétrica-->
+                <article class="post-card">
+                    <h1>Relación simétrica</h1>
+                    <p class="post-excerpt">
+                        Una relación es <strong>étrica</strong> si cuando un elemento está relacionado con otro,
+                         el segundo también está relacionado con el primero.
+                    </p>
+                    <p>
+                        \[
+                        (a, b) \in R \Rightarrow (b, a) \in R
+                        \]
+                    </p>
+                </article>
+                <!--Relación transitiva-->
+                <article class="post-card">
+                    <h1>Relación transitiva</h1>
+                    <p class="post-excerpt">
+                        Una relación es <strong>transitiva</strong> si al relacionarse un elemento con un segundo y este con un tercero, 
+                        el primero se relaciona con el tercero.
+                    </p>
+                    <p>
+                        \[
+                        (a, b) \in R \land (b, c) \in R \Rightarrow (a, c) \in R
+                        \]
+                    </p>
+                </article>
+               <!--Relación de equivalencia--> 
+                <article class="post-card">
+                    <h1>Relación de equivalencia</h1>
+                    <p class="post-excerpt">
+                        Una relación es de <strong>equivalencia</strong> cuando cumple simultáneamente tres propiedades:
+                    </p>
+                    <p>
+                        \[
+                        R \text{ es reflexiva, simétrica y transitiva}
+                        \]
+                    </p>
+                </article>
+                <!--Relaciones de orden-->
+                <article class="post-card">
+                    <h1>Relaciones de orden</h1>
+                    <p class="post-excerpt">
+                        Una <strong>relación de orden</strong> permite comparar elementos de un conjunto y establecer una jerarquía.
+                        Cumple generalmente las siguientes propiedades:
+                    </p>
+                    <p>
+                        \[
+                        \text{Reflexiva, antisimétrica y transitiva}
+                        \]
+                    </p>
+                </article>
+                <!--Aplicaciones -->
+                <article class="post-card">
+                    <h1>Aplicaciones</h1>
+                    <ul>
+                        <li>Bases de datos: modelan relaciones entre tablas y registros.</li>
+                        <li>Redes sociales: representan conexiones entre usuarios.</li>
+                        <li>Clasificación: agrupan objetos según características comunes.</li>
+                        <li>Teoría de grafos: las relaciones permiten estudiar caminos y conexiones.</li>
+                    </ul>
+                </article>
+            </div>
+        </section> 
+    </main>
+</body>
+</html>

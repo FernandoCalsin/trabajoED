@@ -12,6 +12,7 @@
   --cat-combinatoria: #a78bfa;
   --cat-recursion: #64d2ff;
   --cat-modular: #8ef19c;
+  --cat-relaciones: #f08a5d;
 
   --radius: 12px;
   --shadow: 0 6px 20px rgba(0,0,0,0.25);
@@ -71,9 +72,10 @@ body{
 /* Layout principal */
 .layout{
   display: grid;
-  grid-template-columns: 1fr 320px;
+  grid-template-columns: 1fr 450px;
   gap: 24px;
   padding: 26px 0 40px;
+  align-items: start;
 }
 @media (max-width: 900px){
   .layout{ grid-template-columns: 1fr; }
@@ -154,6 +156,10 @@ body{
 .badge.cat-combinatoria{ background: var(--cat-combinatoria); color: #0b0e13; }
 .badge.cat-recursion{ background: var(--cat-recursion); color: #0b0e13; }
 .badge.cat-modular{ background: var(--cat-modular); color: #0b0e13; }
+.badge.cat-relaciones{
+  background: var(--cat-relaciones);
+  color: #0b0e13; 
+}
 
 .tags{ display: flex; flex-wrap: wrap; gap: 8px; }
 .tag{
@@ -347,4 +353,15 @@ body.light .tag:hover {
   border-color: var(--primary);
   color: #0042a3;
 }
-
+.formulas{
+  text-align: center;
+  font-size: 30px;
+}
+.sidebar img{
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+}
+.sidebar{
+  margin-top: 180px;
+}
