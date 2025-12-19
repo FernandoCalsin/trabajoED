@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursión</title>
+    <link rel="stylesheet" href="../styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="/">Matemáticas discretas</a>
+      <nav class="nav">
+        <a href="#archivo" class="nav-link">Archivo</a>
+        <a href="#etiquetas" class="nav-link">Etiquetas</a>
+        <a href="#sobre" class="nav-link">Sobre mí</a>
+      </nav>
+    </div>
+  </header>
+    <main class="container">
+        <section id="inicio" class="layout">
+            <div class="content">
+                <h1>Publicación 2: Recursión</h1>
+                    <p class="intro">
+                        La recursión es una técnica matemática y computacional donde un problema se define en términos de sí mismo. 
+                        Se basa en dos elementos clave:
+                    </p>
+                <!-- Caso Base -->
+                <article class="post-card">
+                    <h1>Caso Base</h1>
+                    <p class="post-excerpt">
+                        Es la condición que detiene la recursión. Representa la solución más simple del problema 
+                        y evita que el proceso se repita indefinidamente.
+                    </p>
+                </article>
+                <!-- Regla Recursiva -->
+                <article class="post-card">
+                    <h1>Regla Recursiva</h1>
+                    <p class="post-excerpt">
+                        Define cómo el problema se divide en subproblemas más pequeños, acercándose progresivamente al caso base.
+                    </p>
+                </article>
+                <!--Formula General-->
+                <article class="post-card">
+                    <p class="post-excerpt">
+                        De forma general, una definición recursiva puede expresarse así:
+                    </p>
+                    <p>
+                        \[
+                        f(n) =
+                        \begin{cases}
+                            \text{caso base}, & \text{si } n = n_0 \\
+                            f(n - 1) + \text{operación}, & \text{si } n > n_0
+                        \end{cases}
+                        \]
+                    </p>
+                    <p>Esta forma indica que el valor de una función depende de su propio resultado para un valor menor, 
+                        hasta alcanzar el caso base.</p>
+                </article>
+                <!-- Factorial -->
+                <article class="post-card">
+                    <p class="post-excerpt">
+                       Un ejemplo clásico es el <strong>factorial</strong>:
+                    </p>
+                    <p>\[
+                        n! =
+                        \begin{cases}
+                            1, & \text{si } n = 0 \\
+                            n \times (n - 1)!, & \text{si } n > 0
+                        \end{cases}
+                        \]
+                    </p>
+                </article>
+                <!-- Aplicaciones -->
+                <article class="post-card">
+                    <h1>Aplicaciones</h1>
+                    <ul>
+                        <li>Programación: facilita la solución de problemas complejos dividiéndolos en subproblemas.</li>
+                        <li>Estructuras de datos: árboles y grafos se definen naturalmente de forma recursiva.</li>
+                        <li>Análisis de algoritmos: permite calcular tiempos de ejecución mediante relaciones de recurrencia.</li>
+                    </ul>
+                </article>
+            </div>
+        </section> 
+    </main>
+</body>
+</html>

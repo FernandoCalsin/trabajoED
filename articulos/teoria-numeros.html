@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teoria de Numeros</title>
+    <link rel="stylesheet" href="../styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="/">Matemáticas discretas</a>
+      <nav class="nav">
+        <a href="#archivo" class="nav-link">Archivo</a>
+        <a href="#etiquetas" class="nav-link">Etiquetas</a>
+        <a href="#sobre" class="nav-link">Sobre mí</a>
+      </nav>
+    </div>
+  </header>
+    <main class="container">
+        <section id="inicio" class="layout">
+            <div class="content">
+                <h1>Publicación 1: Teoría de Números y Combinatoria</h1>
+                    <p class="intro">
+                        La teoría de números es una rama de las matemáticas que estudia 
+                        las propiedades de los números enteros. Algunos de sus conceptos 
+                        más importantes incluyen los números primos, divisibilidad, máximo común divisor 
+                        (MCD) y mínimo común múltiplo (MCM).
+                    </p>
+                <!-- Combinación -->
+                <article class="post-card">
+                    <h1>Combinación</h1>
+                    <p class="post-excerpt">
+                        Por otro lado, la combinatoria se encarga de contar, ordenar y seleccionar 
+                        elementos dentro de un conjunto. Es ampliamente utilizada en probabilidad, informática y estadística.
+                         Una de las fórmulas más comunes en combinatoria es la <strong>combinación</strong>, que permite calcular de cuántas 
+                         formas se pueden seleccionar  k elementos de un conjunto de n elementos, sin importar el orden:
+                    </p>
+                    <p class="formulas">
+                        \( C(n,k) = \binom{n}{k} = \frac{n!}{k!(n-k)!} \)
+                    </p>
+                </article>
+                <!-- Permutación-->
+                <article class="post-card">
+                    <h1>Permutación</h1>
+                    <p class="post-excerpt">
+                        Las permutaciones se utilizan cuando el orden de los elementos sí es importante.
+                         Permiten determinar todas las formas posibles de organizar  k elementos tomados de un conjunto de n. 
+                        Este concepto es fundamental en problemas de organización, arreglos y programación. La fórmula de las permutaciones es:
+                    </p>
+                    <p class="formulas">
+                        \( P(n,k) = \frac{n!}{(n-k)!} \)
+                    </p>
+                </article>
+                <!--Permutación total-->
+                <article class="post-card">
+                    <h1>Permutación total</h1>
+                    <p class="post-excerpt">
+                        Las permutaciones totales consideran todos los elementos de un conjunto y calculan las posibles formas de ordenarlos. 
+                        Este caso se aplica cuando se desea conocer todas las maneras de organizar un conjunto completo de elementos.
+                         Su expresión matemática es:
+                    </p>
+                    <p class="formulas">
+                    \( P(n) = n! \)
+                    </p>
+                </article>
+               <!--Variaciones--> 
+                <article class="post-card">
+                    <h1>Variación</h1>
+                    <p class="post-excerpt">
+                        La variación sin repetición se utiliza cuando se seleccionan k elementos de un conjunto de 
+                        n elementos, considerando el orden y sin permitir que un elemento se repita. Este tipo de variación 
+                        es común en problemas donde cada elemento solo puede usarse una vez, como en la asignación de puestos o 
+                        el ordenamiento de objetos distintos. Su fórmula es:
+                    </p>
+                    <p class="formulas">
+                       \( V(n,k) = \frac{n!}{(n-k)!} \)
+                    </p>
+                </article>
+                <!--Variacion con repetición-->
+                <article class="post-card">
+                    <h1>Variación con repetición</h1>
+                    <p class="post-excerpt">
+                        La variación con repetición se aplica cuando se seleccionan  k elementos de un conjunto de 
+                        n elementos, considerando el orden y permitiendo que los elementos se repitan.
+                         Este caso es muy utilizado en informática y probabilidad, por ejemplo, en la generación de contraseñas, 
+                         códigos o combinaciones donde los elementos pueden repetirse. La fórmula de la variación con repetición es:
+                    </p>
+                    <p class="formulas">
+                        \( V_r(n,k) = n^k \)
+                    </p>
+                </article>
+                <!--Aplicaciones -->
+                <article class="post-card">
+                    <h1>Aplicaciones</h1>
+                    <ul>
+                        <li>Criptografía: la teoría de números se usa para crear claves seguras basadas en números primos grandes</li>
+                        <li>Análisis de algoritmos: la combinatoria permite calcular la probabilidad de eventos.</li>
+                        <li>Juegos y acertijos matemáticos: se usa para analizar la eficiencia de algoritmos y estructuras de datos</li>
+                    </ul>
+                </article>
+            </div>
+
+            <aside class="sidebar">
+                <h2>Ejemplos</h2>
+                <section class="widget">
+                    <img src="../imagenes/combinacion.jpeg" alt="ProblemaCombinación">
+                </section>
+                <section class="widget">
+                    <img src="../imagenes/permutacion.jpeg" alt="ProblemaPermutacion">
+                </section>
+            </aside>
+        </section> 
+    </main>
+</body>
+</html>
